@@ -8,7 +8,7 @@ const { B3Propagator } = require("@opentelemetry/core");
     const exporter = new CollectorTraceExporter({
         serviceName: 'lambda-otel',
         headers:{
-            'Lightstep-Access-Token':'Your-project-key-from-your-settings-tab'
+            'Lightstep-Access-Token':process.env.TOKEN
         },
         url:'https://ingest.lightstep.com:443/api/v2/otel/trace',
     });
