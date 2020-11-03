@@ -1,0 +1,24 @@
+{
+  "name": "lambda-npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "npm install && zip -r deploy.zip ./",
+    "clean": "rm -rf node_modules && rm -rf deploy.zip",
+    "upload": "aws lambda update-function-code --function-name hello-world --zip-file fileb://deploy.zip",
+    "aws": "npm run clean && npm run zip && npm run upload"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/core": "^0.12.0",
+    "@opentelemetry/exporter-collector": "^0.12.0",
+    "@opentelemetry/node": "^0.12.0",
+    "@opentelemetry/plugin-http": "^0.12.0",
+    "@opentelemetry/tracing": "^0.12.0",
+    "lightstep-opentelemetry-launcher-node": "^0.11.0",
+    "uuid": "^8.3.1"
+  }
+}
