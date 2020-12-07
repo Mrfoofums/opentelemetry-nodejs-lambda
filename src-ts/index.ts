@@ -4,7 +4,7 @@ import {
   } from "aws-lambda";
 import {tracer} from './tracing'
 
-export const Handler = async (
+export const handler = async (
     event: APIGatewayProxyEvent
   ): Promise<APIGatewayProxyResult> => {
     
@@ -21,8 +21,6 @@ export const Handler = async (
       body: `A working typescript Lambda response`
     }
   }
-
-
 
 const someWork= () =>{
   const span = tracer.startSpan('someWork');

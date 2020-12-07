@@ -1,2 +1,6 @@
 node_modules
 deploy.zip
+index.js
+index.js.map
+tracing.js
+tracing.js.map
