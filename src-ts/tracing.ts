@@ -3,6 +3,7 @@ import { CollectorTraceExporter } from "@opentelemetry/exporter-collector/build/
 import { NodeTracerProvider } from "@opentelemetry/node/build/src/NodeTracerProvider";
 import { SimpleSpanProcessor } from "@opentelemetry/tracing";
 import { opentelemetry } from "lightstep-opentelemetry-launcher-node";
+
 declare var process : {
     env: {
       ACCESS_TOKEN: string
